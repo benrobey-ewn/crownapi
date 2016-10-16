@@ -14,6 +14,7 @@ use DB;
 */
 
 $app->get('/', function () use ($app) {
-    $results = DB::select("SELECT * FROM users");
+    echo 'loltest';
+    $results = DB::select("SELECT * FROM members");
     return $app->version();
 });
