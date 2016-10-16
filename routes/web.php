@@ -1,7 +1,5 @@
 <?php
 
-use DB;
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -14,7 +12,7 @@ use DB;
 */
 
 $app->get('/', function () use ($app) {
-    echo 'loltest';
-    $results = DB::select("SELECT * FROM members");
+    echo env('DB_HOST');
+    //$results = DB::select("SELECT * FROM members");
     return $app->version();
 });
