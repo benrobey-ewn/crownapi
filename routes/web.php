@@ -12,7 +12,11 @@
 */
 
 $app->get('/', function () use ($app) {
-    echo env('DB_HOST');
-    //$results = DB::select("SELECT * FROM members");
+    try {
+        $results = DB::select("SELECT * FROM members");
+    }
+    catch(Exception $exception) {
+        print_r($exception->getMessage());
+    }
     return $app->version();
 });
