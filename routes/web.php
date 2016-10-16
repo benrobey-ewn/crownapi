@@ -12,6 +12,8 @@
 */
 
 $app->get('/', function () use ($app) {
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
     try {
         $results = DB::select("SELECT * FROM members");
     }
