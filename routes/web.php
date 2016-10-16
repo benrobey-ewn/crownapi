@@ -1,5 +1,7 @@
 <?php
 
+use DB;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,5 +14,6 @@
 */
 
 $app->get('/', function () use ($app) {
+    $results = DB::select("SELECT * FROM users");
     return $app->version();
 });
