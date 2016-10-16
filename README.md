@@ -1,3 +1,3 @@
 ##NEW API FOR SECURE AMS
 
-![Heroku](https://heroku-badge.herokuapp.com/?app=samslaravel&root=/public/index.php)
+![Heroku](https://heroku-badge.herokuapp.com/?app=samslaravel&root=public)
