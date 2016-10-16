@@ -81,7 +81,8 @@ $app->singleton(
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
-
+//JWt AUTH
+$app->register('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
