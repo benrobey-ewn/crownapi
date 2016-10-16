@@ -14,11 +14,6 @@
 $app->get('/', function () use ($app) {
     error_reporting(E_ALL);
     ini_set("display_errors", 1);
-    try {
-        $results = DB::select("SELECT * FROM members");
-    }
-    catch(Exception $exception) {
-        print_r($exception->getMessage());
-    }
+    $results = DB::select("SELECT * FROM members");
     return $app->version();
 });

@@ -2,6 +2,10 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
+
 try {
     (new Dotenv\Dotenv(__DIR__.'/../'))->load();
 } catch (Dotenv\Exception\InvalidPathException $e) {
@@ -87,6 +91,12 @@ class_alias('Tymon\JWTAuth\Facades\JWTAuth', 'JWTAuth');
 class_alias('Tymon\JWTAuth\Facades\JWTFactory', 'JWTFactory');
 $app->register('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
 
+
+$app->configureMonologUsing(function($monolog) {
+    $monolog->pushHandler(new StreamHandler('php://stdout', Logger::WARNING));
+
+    return $monolog;
+});
 
 /*
 |--------------------------------------------------------------------------
