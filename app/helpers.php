@@ -1,4 +1,8 @@
 <?php
+/*
+ *   this is to allow usage of laravel packages in lumen
+ */
+
 if ( ! function_exists('config_path'))
 {
     /**
