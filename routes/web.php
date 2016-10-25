@@ -15,6 +15,7 @@ $app->get('/', function () use ($app) {
     return '<h1>Welcome to the StaffTracker API</h1>';
 });
 
-$app->post('/event/', function () use ($app) {
-    return '<h1>Welcome to the StaffTracker API</h1>';
-});
+$app->post('/event', [
+    'as' => 'event',
+    'uses' => 'EventController@store'
+]);
