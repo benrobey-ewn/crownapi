@@ -25,6 +25,21 @@ $app->post('/room', [
     'uses' => 'RoomController@store'
 ]);
 
+$app->get('/site/populate', [
+    'as' => 'sitePopulate',
+    'uses' => 'SiteController@populate'
+]);
+
+$app->get('/site/populateBeaconsForSites', [
+    'as' => 'sitePopulateBeaconsForSites',
+    'uses' => 'SiteController@populateBeaconsForSites'
+]);
+
+$app->get('/beacon/updateBeacons', [
+    'as' => 'updateBeacons',
+    'uses' => 'BeaconController@updateBeacons'
+]);
+
 $app->post('/doorway', [
     'as' => 'doorway',
     'uses' => 'DoorwayController@store'

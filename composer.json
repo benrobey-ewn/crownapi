@@ -11,7 +11,8 @@
         "league/fractal": "^0.14.0",
         "tymon/jwt-auth": "^0.5.9",
         "laravelista/lumen-vendor-publish": "^2.0",
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2",
+        "sainsburys/guzzle-oauth2-plugin" : "~3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

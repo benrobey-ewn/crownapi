@@ -84,8 +84,6 @@ $app->singleton(
 
 
 //JWt AUTH
-class_alias('Tymon\JWTAuth\Facades\JWTAuth', 'JWTAuth');
-class_alias('Tymon\JWTAuth\Facades\JWTFactory', 'JWTFactory');
 $app->register('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
 $app->register('Laracasts\Generators\GeneratorsServiceProvider');
 $app->register('App\Providers\AppServiceProvider');

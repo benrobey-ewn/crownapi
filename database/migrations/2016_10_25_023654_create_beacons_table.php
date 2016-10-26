@@ -19,6 +19,7 @@ class CreateBeaconsTable extends Migration
             $table->integer('beacon_major');
             $table->integer('beacon_minor');
             $table->string('beacon_id');
+            $table->boolean('assigned')->default(false);
             $table->timestamps();
         });
     }
