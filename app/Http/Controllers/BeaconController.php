@@ -2,20 +2,25 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Event;
+
 
 use Laravel\Lumen\Routing\Controller as BaseController;
 
-class EventControllers extends BaseController
+class BeaconController extends BaseController
 {
+
     public function store(Request $request) {
-        $event = new Event();
+        //this function takes in the SITE ID (from Bluecats) and sets up all of the associated beacons in our DB.
+        $site = $request->input('site');
+        $client = new Client();
+        $result = $client->get('https://api.bluecats.com', [
+            'form_params' => [
+                'sample-form-data' => 'value'
+            ]
+        ]);
+    }
 
-        $event->member_id = $request->member_id;
-        $event->beacon_uuid = $request->beacon_uuid;
-        $event->beacon_major = $request->beacon_major;
-        $event->beacon_minor = $request->beacon_minor;
+    public function show() {
 
-        $event->save();
     }
 }

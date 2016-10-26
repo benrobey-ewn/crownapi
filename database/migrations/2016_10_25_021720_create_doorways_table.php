@@ -16,7 +16,7 @@ class CreateDoorwaysTable extends Migration
         Schema::create('doorways', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('beacon_id');
+            $table->integer('room_id');
             $table->timestamps();
         });
     }

@@ -15,7 +15,27 @@ $app->get('/', function () use ($app) {
     return '<h1>Welcome to the StaffTracker API</h1>';
 });
 
-$app->post('/event', [
-    'as' => 'event',
-    'uses' => 'EventController@store'
+$app->post('/beaconEvent', [
+    'as' => 'beaconEvent',
+    'uses' => 'BeaconEventController@store'
+]);
+
+$app->post('/room', [
+    'as' => 'room',
+    'uses' => 'RoomController@store'
+]);
+
+$app->post('/doorway', [
+    'as' => 'doorway',
+    'uses' => 'DoorwayController@store'
+]);
+
+$app->post('/beacon', [
+    'as' => 'beacon',
+    'uses' => 'BeaconController@store'
+]);
+
+$app->get('/beacon/show', [
+    'as' => 'beacon',
+    'uses' => 'BeaconController@show'
 ]);

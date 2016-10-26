@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventsTable extends Migration
+class CreateSitesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('sites', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('member_id');
-            $table->string('beacon_uuid');
-            $table->string('beacon_major');
-            $table->string('beacon_minor');
+            $table->string('site_id');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('events');
+        Schema::dropIfExists('sites');
     }
 }
