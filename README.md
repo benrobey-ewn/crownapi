@@ -17,7 +17,7 @@ Build docker image:
 
 Run container:
 
-```docker run -d -e "VIRTUAL_PORT=8008" -e "VIRTUAL_HOST=samsapi.docker" --name composer-install-app -v "$PWD":/var/www/html 00d9ffb941a1```
+```docker run -d -e "VIRTUAL_PORT=80" -e "VIRTUAL_HOST=samsapi.docker" --name composer-install-app -v "$PWD":/var/www/html 00d9ffb941a1```
 
 Pull and build:
 
